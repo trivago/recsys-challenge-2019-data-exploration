@@ -21,7 +21,7 @@ DT <- fread(file = f_data, sep = ",", header = TRUE, verbose = TRUE,
             select = cols, colClasses = col_classes)
 
 # Determine previous action type and reference type (same item or other)
-setkey(DT, user_id, session_id, step)
+setkey(DT, user_id, session_id, step) # order the data.table
 DT[, `:=` (prev_action_type = shift(action_type, 1, fill = "no action"),
            is_same_ref      = shift(reference,   1, fill = "NA") == reference),
    by = .(user_id, session_id)]
@@ -64,6 +64,5 @@ fig_2 <- DF_plot %>%
     theme_bw(base_size = 12) +
     theme(legend.position = c(0.8, 0.2))
 
-pdf(file = './plots/figure_2.pdf', width = 6, height = 4)
-fig_2
-dev.off()
+ggsave(file = './plots/figure_2.pdf', plot = fig_2,
+       width = 6, height = 4)

@@ -114,6 +114,7 @@ fig_5b <- fig_5b +
   ylab("Count")
 
 # Combined
-pdf(file = './plots/figure_5.pdf', width = 6, height = 2)
-grid.arrange(fig_5a, fig_5b, ncol = 2)
-dev.off()
+fig_5 <- grid.arrange(fig_5a, fig_5b, ncol = 2)
+
+ggsave(file = './plots/figure_5.pdf', plot = fig_5,
+       width = 6, height = 2)

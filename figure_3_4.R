@@ -35,16 +35,16 @@ d_conv <- function(t) {
 pl_america <- c('AR', 'BR', 'CA', 'CL', 'CO', 'EC', 'MX', 'PE', 'US', 'UY')
 pl_asia    <- c('AU', 'CN', 'HK', 'ID', 'IN', 'JP', 'KR', 'MY', 'NZ', 'PH', 
                 'SG', 'TH', 'TW', 'VN')	
-pl_europe  <- c('AA', 'AE', 'AT', 'BE', 'BG', 'CH', 'CS', 'CZ', 'DE', 'DK',
-                'ES', 'FI', 'FR', 'GR', 'HR', 'HU', 'IE', 'IL', 'IT', 'NL',
-                'NO', 'PL', 'PT', 'RO', 'RS', 'RU', 'SE', 'SI', 'SK', 'TR',
-                'UK', 'ZA')		
+pl_eur_afr  <- c('AA', 'AE', 'AT', 'BE', 'BG', 'CH', 'CS', 'CZ', 'DE', 'DK',
+                 'ES', 'FI', 'FR', 'GR', 'HR', 'HU', 'IE', 'IL', 'IT', 'NL',
+                 'NO', 'PL', 'PT', 'RO', 'RS', 'RU', 'SE', 'SI', 'SK', 'TR',
+                 'UK', 'ZA')		
 
 DT_region <- data.table(
-  platform = c(pl_america, pl_asia, pl_europe),
+  platform = c(pl_america, pl_asia, pl_eur_afr),
   world_region = c(rep('America', length(pl_america)),
                    rep('Asia and Oceania', length(pl_asia)),
-                   rep('Europe and Africa', length(pl_europe)))
+                   rep('Europe and Africa', length(pl_eur_afr)))
 )
 
 #
@@ -113,9 +113,8 @@ fig_3 <- DF_plot %>%
     theme_bw(base_size = 10) +
     theme(legend.position = "none")
 
-pdf(file = './plots/figure_3.pdf', width = 6, height = 4)
-fig_3
-dev.off()
+ggsave(file = './plots/figure_3.pdf', plot = fig_3,
+       width = 6, height = 4)
 
 
 # Conversion per world region
@@ -132,6 +131,5 @@ fig_4 <- DF_plot %>%
   theme_bw(base_size = 10) +
   theme(legend.position = c(0.2, 0.8))
 
-pdf(file = './plots/figure_4.pdf', width = 6, height = 4)
-fig_4
-dev.off()
+ggsave(file = './plots/figure_4.pdf', plot = fig_4,
+       width = 6, height = 4)
