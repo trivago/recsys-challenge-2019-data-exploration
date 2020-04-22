@@ -6,18 +6,21 @@ This repository contains R-code to reproduce the plots in the RecSys Challenge 2
 
 Each plot files contains code to produce a the plot in question.
 
-[figure_2.R](figure_2.R)
+### Figure 2
+Script: [figure_2.R](figure_2.R)  
 
 Frequency of action types that directly precede a clickout.
 
-[figure_3_4.R](figure_3_4.R)
+### Figure 3 and 4
+Script: [figure_3_4.R](figure_3_4.R)  
 
-Figure 3: Temporal patterns of user interactions for the different world regions. 
-Figure 4: Number of clickouts vs. number of interactions for the three world regions.
+Figure 3: Temporal patterns of user interactions for the different world regions.   
+Figure 4: Number of clickouts vs. number of interactions for the three world regions.  
 
-[figure_5.R](figure_5.R)
+### Figure 5
+Script: [figure_5.R](figure_5.R)  
 
-Distribution of number of interactions per user and prices of accommodations in the impression list.
+Distribution of number of interactions per user and prices of accommodations in the impression list.  
 
 
 ## Environment
