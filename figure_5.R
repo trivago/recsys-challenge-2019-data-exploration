@@ -53,7 +53,7 @@ cols_char <- c("user_id", "session_id", "prices", "action_type")
 cols <- c(cols_num, cols_char)
 col_classes <- list(numeric = cols_num, character = cols_char)
 
-DT <- fread(file = f_data, sep = ",", header = TRUE, verbose = TRUE,
+DT <- fread(input = f_data, sep = ",", header = TRUE, verbose = TRUE,
             select = cols, colClasses = col_classes)
 
 # Interactions (steps) per session

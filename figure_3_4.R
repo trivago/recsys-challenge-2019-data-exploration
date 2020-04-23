@@ -55,9 +55,9 @@ cols_char <- c("platform", "action_type")
 cols <- c(cols_num, cols_char)
 col_classes <- list(numeric = cols_num, character = cols_char)
 
-DT_train <- fread(file = f_train, sep = ",", header = TRUE, verbose = TRUE,
+DT_train <- fread(input = f_train, sep = ",", header = TRUE, verbose = TRUE,
                   select = cols, colClasses = col_classes)
-DT_test  <- fread(file = f_test, sep = ",", header = TRUE, verbose = TRUE,
+DT_test  <- fread(input = f_test, sep = ",", header = TRUE, verbose = TRUE,
                   select = cols, colClasses = col_classes)
 DT_train[, time_frame := "train"]
 DT_test[, time_frame := "test"]
