@@ -9,16 +9,15 @@ Each plot files contains code to produce a the plot in question.
 ### Figure 2
 Script: [figure_2.R](figure_2.R)  
 
+Temporal patterns of user interactions for the different world regions.   
+
+### Figure 3
+Script: [figure_3.R](figure_3.R)  
+
 Frequency of action types that directly precede a clickout.
 
-### Figure 3 and 4
-Script: [figure_3_4.R](figure_3_4.R)  
-
-Figure 3: Temporal patterns of user interactions for the different world regions.   
-Figure 4: Number of clickouts vs. number of interactions for the three world regions.  
-
-### Figure 5
-Script: [figure_5.R](figure_5.R)  
+### Figure 4
+Script: [figure_4.R](figure_4.R)  
 
 Distribution of number of interactions per user and prices of accommodations in the impression list.  
 
