@@ -101,20 +101,20 @@ DT_price_bins[, `:=` (N = coalesce(N, 0L),
 # Plot ------------------------------------------------------------------------
 
 # Interactions per session
-fig_5a <- hist_empty_log(DT_step_bins, "step_bin", "N")
-fig_5a <- fig_5a +
+fig_4a <- hist_empty_log(DT_step_bins, "step_bin", "N")
+fig_4a <- fig_4a +
   xlab("Interactions per sessions") +
   ylab("Count") +
   scale_y_continuous(labels = scales::scientific)
 
 # Prices
-fig_5b <- hist_empty_log(DT_price_bins, "price_bin", "N")
-fig_5b <- fig_5b +
+fig_4b <- hist_empty_log(DT_price_bins, "price_bin", "N")
+fig_4b <- fig_4b +
   xlab("Price [Euros]") +
   ylab("Count")
 
 # Combined
-fig_5 <- grid.arrange(fig_5a, fig_5b, ncol = 2)
+fig_4 <- grid.arrange(fig_4a, fig_4b, ncol = 2)
 
-ggsave(file = './plots/figure_5.pdf', plot = fig_5,
+ggsave(file = './plots/figure_4.pdf', plot = fig_4,
        width = 6, height = 2)
