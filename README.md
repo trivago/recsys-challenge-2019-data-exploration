@@ -1,5 +1,9 @@
 # RecSys Challenge 2019 - Data exploration
 
+> [!CAUTION]
+> This repository has been archived as of October 2025.  
+> If you wish to update or extend this project, please create a fork.
+
 This repository contains R-code to reproduce the plots in the RecSys Challenge 2019 dataset paper.
 
 ## Plotting files
